@@ -1,0 +1,180 @@
+/* ============================================================
+ * 克劳德 - AI卡牌叙事冒险
+ * CSS变量系统 (CSS Variables)
+ * ============================================================ */
+
+:root {
+  /* ============================================================
+   * 颜色系统
+   * ============================================================ */
+
+  /* 羊皮纸配色 */
+  --parchment-light: #f4e4bc;
+  --parchment-base: #e8d5a3;
+  --parchment-dark: #d4c089;
+
+  /* 墨水配色 */
+  --ink-primary: #2c1810;
+  --ink-secondary: #4a3728;
+  --ink-muted: #6b5344;
+
+  /* 金色强调 */
+  --gold-accent: #c9a227;
+  --gold-light: #e8c547;
+  --gold-dark: #8b7019;
+
+  /* 功能色 */
+  --blood-red: #8b1e1e;
+  --emerald: #2d5a3d;
+  --sapphire: #1e3a5f;
+  --energy-blue: #4a90d9;
+  --health-red: #c44536;
+
+  /* ============================================================
+   * 玻璃态效果
+   * ============================================================ */
+  --glass-white: rgba(255, 255, 255, 0.15);
+  --glass-blur: blur(12px);
+
+  /* ============================================================
+   * 阴影系统
+   * ============================================================ */
+  --shadow-soft: 0 4px 20px rgba(44, 24, 16, 0.15);
+  --shadow-medium: 0 8px 32px rgba(44, 24, 16, 0.2);
+  --shadow-strong: 0 12px 48px rgba(44, 24, 16, 0.25);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+
+  /* ============================================================
+   * 圆角系统
+   * ============================================================ */
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+
+  /* ============================================================
+   * 过渡动画
+   * ============================================================ */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* ============================================================
+   * 间距系统
+   * ============================================================ */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+}
+
+/* ============================================================
+ * 动画关键帧
+ * ============================================================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes parchment-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes slideOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+}
